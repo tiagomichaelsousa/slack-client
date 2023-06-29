@@ -1,0 +1,14 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "ordered_imports": {
+            "sort_algorithm": "length"
+        },
+        "no_unused_imports": true,
+        "single_blank_line_at_eof": true,
+        "declare_parentheses": true,
+        "explicit_string_variable": true,
+        "fully_qualified_strict_types": true,
+        "use_arrow_functions": true
+    }
+}
