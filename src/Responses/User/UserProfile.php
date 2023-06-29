@@ -51,7 +51,7 @@ final class UserProfile implements ResponseContract
             $attributes['display_name'],
             $attributes['real_name_normalized'],
             $attributes['display_name_normalized'],
-            $attributes['email'] ?? "",
+            $attributes['email'] ?? '',
             $attributes['image_24'],
             $attributes['image_32'],
             $attributes['image_48'],
