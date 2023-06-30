@@ -1,6 +1,5 @@
 <?php
 
-use Slack\Slack;
 use Slack\Client;
 use GuzzleHttp\Client as GuzzleClient;
 use Psr\Http\Message\RequestInterface;

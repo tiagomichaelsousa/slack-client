@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-namespace Slack;
+use Slack\Client;
+use Slack\Factory;
 
 final class Slack
 {

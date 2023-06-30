@@ -1,6 +1,5 @@
 <?php
 
-use Slack\Slack;
 use Slack\Resources\User;
 use Slack\Resources\Reminder;
 use Slack\Resources\Conversation;
