@@ -1,5 +1,5 @@
 {
-    "name": "tiagomichaelsousa/slack-php",
+    "name": "tiagomichaelsousa/slack-client",
     "description": "A slack sdk for php",
     "keywords": ["php", "slack","sdk", "php", "package"],
     "license": "MIT",
