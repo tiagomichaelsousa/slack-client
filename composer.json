@@ -36,7 +36,10 @@
     "autoload": {
         "psr-4": {
             "Slack\\": "src/"
-        }
+        },
+         "files": [
+            "src/Slack.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
