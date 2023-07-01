@@ -125,6 +125,10 @@ test('throws an exception', function (string $exceptionClass, string $error, str
     [\Slack\Exceptions\Slack\TooManyReactionsException::class, 'too_many_reactions', 'The limit for reactions a person may add to the item has been reached.'],
     [\Slack\Exceptions\Slack\InvalidNameException::class, 'invalid_name', 'Value passed for name was invalid.'],
     [\Slack\Exceptions\Slack\BadTimestampException::class, 'bad_timestamp', 'Value passed for timestamp was invalid.'],
+    [\Slack\Exceptions\Slack\TeamAddedToOrgException::class, 'team_added_to_org', 'The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.'],
+    [\Slack\Exceptions\Slack\FileNotFoundException::class, 'file_not_found', 'File specified by file does not exist.'],
+    [\Slack\Exceptions\Slack\FileCommentNotFoundException::class, 'file_comment_not_found', 'File comment specified by file_comment does not exist.'],
+    [\Slack\Exceptions\Slack\NoReactionException::class, 'no_reaction', 'The specified reaction does not exist, or the requestor is not the original reaction author.'],
 ]);
 
 test('throws an exception for MissingScopeException', function () {

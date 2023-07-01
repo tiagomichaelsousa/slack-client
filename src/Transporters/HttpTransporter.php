@@ -165,6 +165,9 @@ final class HttpTransporter implements TransporterContract
             'thread_locked' => \Slack\Exceptions\Slack\ThreadLockedException::class,
             'too_many_emoji' => \Slack\Exceptions\Slack\TooManyEmojiException::class,
             'too_many_reactions' => \Slack\Exceptions\Slack\TooManyReactionsException::class,
+            'file_not_found' => \Slack\Exceptions\Slack\FileNotFoundException::class,
+            'file_comment_not_found' => \Slack\Exceptions\Slack\FileCommentNotFoundException::class,
+            'no_reaction' => \Slack\Exceptions\Slack\NoReactionException::class,
             /** Common exceptions **/
             'invalid_name' => \Slack\Exceptions\Slack\InvalidNameException::class,
             'bad_timestamp' => \Slack\Exceptions\Slack\BadTimestampException::class,

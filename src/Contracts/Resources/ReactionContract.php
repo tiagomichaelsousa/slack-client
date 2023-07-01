@@ -4,6 +4,7 @@ namespace Slack\Contracts\Resources;
 
 use DateTime;
 use Slack\Responses\Reaction\AddReactionResponse;
+use Slack\Responses\Reaction\RemoveReactionResponse;
 
 interface ReactionContract
 {
@@ -48,8 +49,7 @@ interface ReactionContract
      *
      * @see https://api.slack.com/methods/reactions.remove
      *
-     * @param  string  $name
      * @param  array<string, mixed>  $parameters
-     * public function remove(string $name, array $parameters): DeleteReactionResponse;
      */
+    public function remove(string $channel, string $name, string|DateTime $timestamp, array $parameters = []): RemoveReactionResponse;
 }
