@@ -156,7 +156,18 @@ final class HttpTransporter implements TransporterContract
             'too_many_users' => \Slack\Exceptions\Slack\TooManyUsersException::class,
             'user_not_found' => \Slack\Exceptions\Slack\UserNotFoundException::class,
             'user_not_visible' => \Slack\Exceptions\Slack\UserNotVisibleException::class,
+            /** Reactions execptions **/
+            'already_reacted' => \Slack\Exceptions\Slack\AlreadyReactedException::class,
+            'external_channel_migrating' => \Slack\Exceptions\Slack\ExternalChannelMigratingException::class,
+            'message_not_found' => \Slack\Exceptions\Slack\MessageNotFoundException::class,
+            'no_item_specified' => \Slack\Exceptions\Slack\NoItemSpecifiedException::class,
+            'not_reactable' => \Slack\Exceptions\Slack\NotReactableException::class,
+            'thread_locked' => \Slack\Exceptions\Slack\ThreadLockedException::class,
+            'too_many_emoji' => \Slack\Exceptions\Slack\TooManyEmojiException::class,
+            'too_many_reactions' => \Slack\Exceptions\Slack\TooManyReactionsException::class,
             /** Common exceptions **/
+            'invalid_name' => \Slack\Exceptions\Slack\InvalidNameException::class,
+            'bad_timestamp' => \Slack\Exceptions\Slack\BadTimestampException::class,
             'not_found' => \Slack\Exceptions\Slack\NotFoundException::class,
             'missing_argument' => \Slack\Exceptions\Slack\MissingArgumentException::class,
             'invalid_cursor' => \Slack\Exceptions\Slack\InvalidCursorException::class,

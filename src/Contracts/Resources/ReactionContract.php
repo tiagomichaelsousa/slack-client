@@ -2,6 +2,9 @@
 
 namespace Slack\Contracts\Resources;
 
+use DateTime;
+use Slack\Responses\Reaction\AddReactionResponse;
+
 interface ReactionContract
 {
     /**
@@ -9,11 +12,9 @@ interface ReactionContract
      *
      * @see https://api.slack.com/methods/reactions.add
      *
-     * @param  string  $channel
-     * @param  string  $name
-     * @param  string  $timestamp
-     * public function add(string $channel, string $name, string $timestamp): AddReactionResponse;
+     * @param  array<string, mixed>  $parameters
      */
+    public function add(string $channel, string $name, string|DateTime $timestamp, array $parameters = []): AddReactionResponse;
 
     /**
      * Gets reactions for an item.
