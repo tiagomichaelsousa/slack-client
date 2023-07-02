@@ -4,6 +4,7 @@ namespace Slack\Contracts\Resources;
 
 use DateTime;
 use Slack\Responses\Reaction\AddReactionResponse;
+use Slack\Responses\Reaction\GetReactionResponse;
 use Slack\Responses\Reaction\RemoveReactionResponse;
 
 interface ReactionContract
@@ -23,17 +24,8 @@ interface ReactionContract
      * @see https://api.slack.com/methods/reactions.get
      *
      * @param  array<string, mixed>  $parameters
-     * public function get(array $parameters): GetReactionResponse;
      */
-
-    /**
-     * Lists reactions made by a user.
-     *
-     * @see https://api.slack.com/methods/reactions.list
-     *
-     * @param  array<string, mixed>  $parameters
-     * public function list(array $parameters): ListReactionsResponse;
-     */
+    public function get(string $channel, string|DateTime $timestamp, array $parameters = []): GetReactionResponse;
 
     /**
      * Lists reactions made by a user.
