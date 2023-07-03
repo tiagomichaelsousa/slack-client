@@ -5,6 +5,7 @@ use Slack\Resources\Reaction;
 use Slack\Testing\ClientFake;
 use Slack\Responses\Reaction\AddReactionResponse;
 use Slack\Responses\Reaction\GetReactionResponse;
+use Slack\Responses\Reaction\ListReactionsResponse;
 use Slack\Responses\Reaction\RemoveReactionResponse;
 
 it('allows to react to a message', function () {
@@ -16,9 +17,9 @@ it('allows to react to a message', function () {
 
     $fake->assertSent(Reaction::class, function ($method, $parameters) use ($date) {
         return $method === 'add' &&
-          $parameters['channel'] === 'channel' &&
-          $parameters['name'] === 'heart' &&
-          $parameters['timestamp'] === (string) Carbon::instance($date)->timestamp;
+            $parameters['channel'] === 'channel' &&
+            $parameters['name'] === 'heart' &&
+            $parameters['timestamp'] === (string) Carbon::instance($date)->timestamp;
     });
 });
 
@@ -31,9 +32,19 @@ it('allows to get a reaction from a message', function () {
 
     $fake->assertSent(Reaction::class, function ($method, $parameters) use ($date) {
         return $method === 'get' &&
-          $parameters['channel'] === 'channel' &&
-          $parameters['timestamp'] === (string) Carbon::instance($date)->timestamp;
+            $parameters['channel'] === 'channel' &&
+            $parameters['timestamp'] === (string) Carbon::instance($date)->timestamp;
     });
+});
+
+it('allows to list the reactions', function () {
+    $fake = new ClientFake([
+        ListReactionsResponse::fake(),
+    ]);
+
+    $fake->reactions()->list();
+
+    $fake->assertSent(Reaction::class, fn ($method, $parameters) => $method === 'list');
 });
 
 it('allows to remove a reaction from a message', function () {
@@ -45,11 +56,8 @@ it('allows to remove a reaction from a message', function () {
 
     $fake->assertSent(Reaction::class, function ($method, $parameters) use ($date) {
         return $method === 'remove' &&
-          $parameters['channel'] === 'channel' &&
-          $parameters['name'] === 'heart' &&
-          $parameters['timestamp'] === (string) Carbon::instance($date)->timestamp;
+            $parameters['channel'] === 'channel' &&
+            $parameters['name'] === 'heart' &&
+            $parameters['timestamp'] === (string) Carbon::instance($date)->timestamp;
     });
 });
-
-it('allows to list the reactions', function () {
-})->todo();

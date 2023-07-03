@@ -10,6 +10,7 @@ use Slack\ValueObjects\Transporter\Payload;
 use Slack\Contracts\Resources\ReactionContract;
 use Slack\Responses\Reaction\AddReactionResponse;
 use Slack\Responses\Reaction\GetReactionResponse;
+use Slack\Responses\Reaction\ListReactionsResponse;
 use Slack\Responses\Reaction\RemoveReactionResponse;
 
 final class Reaction implements ReactionContract
@@ -52,6 +53,23 @@ final class Reaction implements ReactionContract
         $result = $this->transporter->requestObject($payload);
 
         return GetReactionResponse::from($result);
+    }
+
+    /**
+     * Lists reactions made by a user.
+     *
+     * @see https://api.slack.com/methods/reactions.list
+     *
+     * @param  array<string, mixed>  $parameters
+     */
+    public function list(array $parameters = []): ListReactionsResponse
+    {
+        $payload = Payload::get('reactions.list', $parameters);
+
+        /** @var array{ok: bool, items: array<int, array{type: string, channel: string, message: array{type: string, text: string, user: string, ts: string, team: string, reactions: array<int, array{name: string, users: array<int, string>, count: int}>, permalink: string}}>, response_metadata: array{next_cursor: string}} $result */
+        $result = $this->transporter->requestObject($payload);
+
+        return ListReactionsResponse::from($result);
     }
 
     /**

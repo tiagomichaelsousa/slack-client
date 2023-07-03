@@ -5,6 +5,7 @@ namespace Slack\Contracts\Resources;
 use DateTime;
 use Slack\Responses\Reaction\AddReactionResponse;
 use Slack\Responses\Reaction\GetReactionResponse;
+use Slack\Responses\Reaction\ListReactionsResponse;
 use Slack\Responses\Reaction\RemoveReactionResponse;
 
 interface ReactionContract
@@ -33,8 +34,8 @@ interface ReactionContract
      * @see https://api.slack.com/methods/reactions.list
      *
      * @param  array<string, mixed>  $parameters
-     * public function list(array $parameters): ListReactionsResponse;
      */
+    public function list(array $parameters = []): ListReactionsResponse;
 
     /**
      * Removes a reaction from an item.

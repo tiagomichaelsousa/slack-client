@@ -2,8 +2,10 @@
 
 use Carbon\Carbon;
 use Slack\Responses\Reaction\Message;
+use Slack\Responses\Reaction\MessageItems;
 use Slack\Responses\Reaction\AddReactionResponse;
 use Slack\Responses\Reaction\GetReactionResponse;
+use Slack\Responses\Reaction\ListReactionsResponse;
 use Slack\Responses\Reaction\RemoveReactionResponse;
 
 test('add', function () {
@@ -15,6 +17,23 @@ test('add', function () {
     expect($result)
         ->toBeInstanceOf(AddReactionResponse::class)
         ->ok->toBeTruthy();
+});
+
+test('list', function () {
+    $fake = ListReactionsResponse::fake();
+    $client = mockClient('GET', 'reactions.list', [], $fake->toArray());
+
+    $result = $client->reactions()->list();
+
+    expect($result)
+        ->toBeInstanceOf(ListReactionsResponse::class)
+        ->ok->toBeTruthy()
+        ->items->each->toBeInstanceOf(MessageItems::class);
+
+    expect($result->items[0])
+        ->type->toBe($fake->items[0]->type)
+        ->channel->toBe($fake->items[0]->channel)
+        ->message->toArray()->toBe($fake->items[0]->message->toArray());
 });
 
 test('get', function () {
