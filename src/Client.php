@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Slack;
 
 use Slack\Resources\User;
+use Slack\Resources\Reaction;
 use Slack\Resources\Reminder;
 use Slack\Resources\Conversation;
 use Slack\Contracts\ClientContract;
@@ -48,5 +49,15 @@ final class Client implements ClientContract
     public function reminders(): Reminder
     {
         return new Reminder($this->transporter);
+    }
+
+    /**
+     * Methods that are available to the Client in regards to the Reminder resource.
+     *
+     * @see https://api.slack.com/methods?filter=reactions
+     */
+    public function reactions(): Reaction
+    {
+        return new Reaction($this->transporter);
     }
 }

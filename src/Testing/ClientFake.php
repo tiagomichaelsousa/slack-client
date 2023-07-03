@@ -9,6 +9,7 @@ use Slack\Contracts\ResponseContract;
 use Slack\Testing\Requests\TestRequest;
 use PHPUnit\Framework\Assert as PHPUnit;
 use Slack\Testing\Resources\UserTestResource;
+use Slack\Testing\Resources\ReactionTestResource;
 use Slack\Testing\Resources\ReminderTestResource;
 use Slack\Testing\Resources\ConversationTestResource;
 
@@ -135,5 +136,10 @@ class ClientFake implements ClientContract
     public function reminders(): ReminderTestResource
     {
         return new ReminderTestResource($this);
+    }
+
+    public function reactions(): ReactionTestResource
+    {
+        return new ReactionTestResource($this);
     }
 }
