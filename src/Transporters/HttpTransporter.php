@@ -118,7 +118,7 @@ final class HttpTransporter implements TransporterContract
      *
      * @return class-string<Exception>
      */
-    private function throwException(string $error)
+    private function throwException(string $error): string
     {
         return match ($error) {
             /** Reminder exceptions **/

@@ -21,7 +21,7 @@ it('returns a fake response', function () {
 
 it('throws fake exceptions', function () {
     $fake = new ClientFake([
-        new \Slack\Exceptions\ErrorException([
+        new Slack\Exceptions\ErrorException([
             'ok' => 'false',
             'error' => 'some-error',
         ]),

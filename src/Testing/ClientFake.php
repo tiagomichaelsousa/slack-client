@@ -63,7 +63,7 @@ class ClientFake implements ClientContract
     /**
      * @return mixed[]
      */
-    private function sent(string $resource, callable $callback = null): array
+    private function sent(string $resource, ?callable $callback = null): array
     {
         if (! $this->hasSent($resource)) {
             return [];
@@ -79,7 +79,7 @@ class ClientFake implements ClientContract
         return $this->resourcesOf($resource) !== [];
     }
 
-    public function assertNotSent(string $resource, callable $callback = null): void
+    public function assertNotSent(string $resource, ?callable $callback = null): void
     {
         PHPUnit::assertCount(
             0,
