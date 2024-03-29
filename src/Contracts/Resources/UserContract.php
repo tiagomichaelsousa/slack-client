@@ -43,7 +43,7 @@ interface UserContract
      * @see https://api.slack.com/methods/users.identity
      *
      * @param  array<string, mixed>  $parameters
-     * public function identity(array $parameters): IndetityResponse;
+     *                                            public function identity(array $parameters): IndetityResponse;
      */
 
     /**
@@ -70,7 +70,7 @@ interface UserContract
      * @see https://api.slack.com/methods/users.lookupByEmail
      *
      * @param  array<string, mixed>  $parameters
-     * public function lookupByEmail(array $parameters): LookupByEmailResponse;
+     *                                            public function lookupByEmail(array $parameters): LookupByEmailResponse;
      */
 
     /**
@@ -86,7 +86,7 @@ interface UserContract
      * @see https://api.slack.com/methods/users.setPhoto
      *
      * @param  array<string, mixed>  $parameters
-     * public function setPhoto(array $parameters): SetPhotoResponse;
+     *                                            public function setPhoto(array $parameters): SetPhotoResponse;
      */
 
     /**
@@ -95,7 +95,7 @@ interface UserContract
      * @see https://api.slack.com/methods/users.setPresence
      *
      * @param  array<string, mixed>  $parameters
-     * public function setPresence(array $parameters): TranslationResponse;
+     *                                            public function setPresence(array $parameters): TranslationResponse;
      */
 
     /**
@@ -113,6 +113,6 @@ interface UserContract
      * @see https://api.slack.com/methods/users.profile.set
      *
      * @param  array<string, mixed>  $parameters
-     * public function setProfile(array $parameters): SetProfileResponse;
+     *                                            public function setProfile(array $parameters): SetProfileResponse;
      */
 }

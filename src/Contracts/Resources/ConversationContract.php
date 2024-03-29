@@ -24,7 +24,7 @@ interface ConversationContract
      * @see https://api.slack.com/methods/conversations.acceptSharedInvite
      *
      * @param  array<string, mixed>  $parameters
-     * public function acceptSharedInvite(array $parameters = []): AcceptConversationSharedInviteResponse;
+     *                                            public function acceptSharedInvite(array $parameters = []): AcceptConversationSharedInviteResponse;
      */
 
     /**
@@ -33,7 +33,7 @@ interface ConversationContract
      * @see https://api.slack.com/methods/conversations.approveSharedInvite
      *
      * @param  array<string, mixed>  $parameters
-     * public function approveSharedInvite(array $parameters = []): ApproveConversationSharedInviteResponse;
+     *                                            public function approveSharedInvite(array $parameters = []): ApproveConversationSharedInviteResponse;
      */
 
     /**
@@ -65,7 +65,7 @@ interface ConversationContract
      * @see https://api.slack.com/methods/conversations.declineSharedInvite
      *
      * @param  array<string, mixed>  $parameters
-     * public function declineSharedInvite(array $parameters = []): DeclineConversationSharedInviteResponse;
+     *                                            public function declineSharedInvite(array $parameters = []): DeclineConversationSharedInviteResponse;
      */
 
     /**
@@ -74,7 +74,7 @@ interface ConversationContract
      * @see https://api.slack.com/methods/conversations.history
      *
      * @param  array<string, mixed>  $parameters
-     * public function history(array $parameters = []): DeclineConversationSharedInviteResponse;
+     *                                            public function history(array $parameters = []): DeclineConversationSharedInviteResponse;
      */
 
     /**
@@ -102,7 +102,7 @@ interface ConversationContract
      * @see https://api.slack.com/methods/conversations.inviteShared
      *
      * @param  array<string, mixed>  $parameters
-     * public function inviteShared(array $parameters = []): InviteConversationSharedResponse;
+     *                                            public function inviteShared(array $parameters = []): InviteConversationSharedResponse;
      */
 
     /**
@@ -125,7 +125,7 @@ interface ConversationContract
      * @see https://api.slack.com/methods/conversations.leave
      *
      * @param  array<string, mixed>  $parameters
-     * public function leave(array $parameters = []): LeaveConversationResponse;
+     *                                            public function leave(array $parameters = []): LeaveConversationResponse;
      */
 
     /**
@@ -143,7 +143,7 @@ interface ConversationContract
      * @see https://api.slack.com/methods/conversations.listConnectInvites
      *
      * @param  array<string, mixed>  $parameters
-     * public function listConnectInvites(array $parameters = []): ListConversationConnectInvitesResponse;
+     *                                            public function listConnectInvites(array $parameters = []): ListConversationConnectInvitesResponse;
      */
 
     /**
@@ -152,7 +152,7 @@ interface ConversationContract
      * @see https://api.slack.com/methods/conversations.mark
      *
      * @param  array<string, mixed>  $parameters
-     * public function mark(array $parameters = []): MarkConversationResponse;
+     *                                            public function mark(array $parameters = []): MarkConversationResponse;
      */
 
     /**
@@ -170,7 +170,7 @@ interface ConversationContract
      * @see https://api.slack.com/methods/conversations.open
      *
      * @param  array<string, mixed>  $parameters
-     * public function open(array $parameters = []): OpenConversationResponse;
+     *                                            public function open(array $parameters = []): OpenConversationResponse;
      */
 
     /**
@@ -186,7 +186,7 @@ interface ConversationContract
      * @see https://api.slack.com/methods/conversations.replies
      *
      * @param  array<string, mixed>  $parameters
-     * public function replies(array $parameters = []): RepliesConversationResponse;
+     *                                            public function replies(array $parameters = []): RepliesConversationResponse;
      */
 
     /**
